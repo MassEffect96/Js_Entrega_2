@@ -1,0 +1,188 @@
+// Fuentes
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* VARIABLES COLOR */
+$backgroundcolor: radial-gradient(circle, rgba(0, 174, 255, 0.432) 0%, rgb(131, 1, 252) 100%);
+$colorprincipal: rgb(234, 0, 255);
+$colorprincipal2: rgb(0, 0, 0);
+$colorsecundario: rgb(0, 247, 255);
+$colorsecundario2: rgb(0, 174, 255);
+$textshadow: 5px 2px 4px $colorprincipal2,
+    0px 0px 10px $colorprincipal2,
+    0px 0px 20px $colorprincipal2,
+    0px 0px 40px $colorprincipal2,
+    0px 0px 80px $colorprincipal2;
+$textshadow2: 0px 0px 4px $colorsecundario2,
+    0px 0px 10px $colorsecundario2,
+    0px 0px 20px $colorsecundario2,
+    0px 0px 40px $colorsecundario2,
+    0px 0px 80px $colorsecundario2;
+
+body {
+    background-image: url(../img/miami-trees-triangle-neon-artwork-4k-7r.jpg);
+    background-size: cover;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+
+
+
+    h1 {
+        color: $colorprincipal;
+        text-shadow: $textshadow;
+    }
+
+    h2 {
+        color: $colorprincipal;
+        text-shadow: $textshadow;
+    }
+
+    h3 {
+        color: $colorprincipal;
+        text-shadow: $textshadow;
+    }
+
+    h4 {
+        color: $colorprincipal;
+        text-shadow: $textshadow;
+    }
+
+    p {
+        color: $colorsecundario;
+        text-shadow: $textshadow2;
+    }
+
+
+    ul {
+        text-shadow: $textshadow2;
+        list-style: none;
+
+    }
+
+    //MEDIA QUERY DE HOVER UL
+
+    @media (min-width:576px) {
+
+        ul a:hover {
+            transform: scale(1.3)
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+    nav {
+        box-shadow: 0px 10px 50px $colorprincipal,
+            0px 10px 50px $colorprincipal;
+    }
+
+    footer {
+        box-shadow: 0px 0px 50px $colorsecundario,
+            0px 0px 10px $colorsecundario;
+
+        & img:hover {
+            transform: scale(1.15);
+        }
+
+    }
+}
+
+/* Variables de bootstrap */
+.bg-dark {
+    --bs-bg-opacity: 0.4;
+    background: $backgroundcolor;
+}
+
+.navbar-dark {
+    --bs-navbar-color: rgb(0, 0, 0);
+    --bs-navbar-hover-color: rgb(0, 247, 255);
+    --bs-navbar-disabled-color: rgb(0, 247, 255);
+    --bs-navbar-active-color: rgb(234, 0, 255);
+    --bs-navbar-brand-color: $colorsecundario2;
+    --bs-navbar-brand-hover-color: rgb(234, 0, 255);
+    --bs-navbar-toggler-border-color: rgb(0, 247, 255);
+
+
+}
+
+/* FORMULARIO DE CONTACTO */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Estilo del label de los imputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+/* Estilo Boton Submit */
+input[type=submit] {
+    background-color: $colorprincipal;
+    color: $colorsecundario;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/*-------- Estilos y Animaciones de Cards!!!!-------- */
+
+.card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(5, 145, 226, 0.61), 0 0 6px rgba(4, 182, 236, 0.959);
+    cursor: pointer;
+
+    & h4 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #ff0077;
+        text-decoration: underline;
+        text-shadow: $textshadow2;
+    }
+
+    & img {
+        object-fit: contain;
+
+    }
+
+}
+
+
+@media (min-width: 767px) {
+
+    .card:hover {
+        transform: scale(1.19);
+        box-shadow: 0 0px 30px $colorsecundario, 0 4px 8px rgba(11, 228, 199, 0.904);
+        animation: move 2s ease-in-out;
+
+
+    }
+
+}
+
+@media (max-width: 775px) {
+
+    .card:hover {
+        transform: scale(1.09);
+        box-shadow: 0 0px 30px $colorsecundario, 0 4px 8px rgba(11, 228, 199, 0.849);
+    }
+
+}
+
+@media (min-width:1100px) {
+    .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0px 30px $colorsecundario, 0 4px 8px rgba(11, 228, 199, 0.904);
+    }
+}
